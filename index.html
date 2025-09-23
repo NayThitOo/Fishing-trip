@@ -1,113 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fishing in Myanmar - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fishing in Myanmar</title>
   <style>
-    /* Background with fish pattern */
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color: #0a2f2f;
-      line-height: 1.6;
-      background-image: url('https://images.unsplash.com/photo-1503342452485-86cf0b7a4c4a?auto=format&fit=crop&w=1600&q=60');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      background-color: #b3e5fc; /* Baby Blue */
+      color: #333;
     }
-    .overlay {
-      min-height: 100vh;
-      background: rgba(255,255,255,0.92);
-      padding: 32px;
+
+    header {
+      background: #0288d1;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
-    header{display:flex;align-items:center;justify-content:space-between}
-    nav a{margin-left:12px;text-decoration:none;color:#0a2f2f;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
-    img.responsive{max-width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
-    footer{margin-top:28px;font-size:0.9rem;color:#234}
-    .card{background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    .small {font-size:0.9rem;color:#3a3a3a}
-    @media (max-width:800px){
-      .hero{grid-template-columns:1fr}
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background: #0277bd;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .intro img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #0288d1;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #01579b;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #0288d1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <header>
-      <h1>Fishing in Myanmar</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <h2>Welcome to Myanmar's waterways</h2>
-          <p>Myanmar is home to rich rivers, lakes and coastal waters where fishing is both livelihood and culture. Below you'll find photos, a short video, and an audio track that evokes the river life.</p>
+  <header>
+    <h1>Fishing in Myanmar</h1>
+    <p>Discover the beauty of Myanmar’s rivers, lakes, and oceans</p>
+  </header>
 
-          <p class="small">Tip: click the links in the navigation to see two more pages with more photos and local tips.</p>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-          <hr>
+  <div class="container">
+    <section class="intro" id="about">
+      <h2>Welcome to Fishing in Myanmar</h2>
+      <p>Fishing has always been an important part of Myanmar’s culture and livelihood. From the Irrawaddy River to the Andaman Sea, Myanmar is home to diverse fish species and stunning landscapes for fishermen and tourists alike.</p>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Fishing in Myanmar">
+      <br>
+      <a href="#gallery" class="btn">View Gallery</a>
+    </section>
 
-          <h3>Quick facts</h3>
-          <p>
-            - Primary fishing areas: Irrawaddy River, Inle Lake, coastal zones. <br>
-            - Popular catches: carp, catfish, tilapia and local freshwater species. <br>
-            - Best months: generally cooler, drier months for comfortable trips.
-          </p>
-
-          <p>Remember to respect local rules and practice sustainable fishing.</p>
-
-          <p>
-            <a class="card" href="#learn-more">Learn more about local fishing</a>
-          </p>
-
-        </div>
-
-        <aside class="card">
-          <h4>Featured photo</h4>
-          <!-- Photo -->
-          <img class="responsive" src="https://images.unsplash.com/photo-1558981285-8a4b6e09a36d?auto=format&fit=crop&w=800&q=60" alt="Fisherman in a small boat on a river">
-
-          <h4 style="margin-top:12px">Listen</h4>
-          <!-- Song/audio -->
-          <audio controls>
-            <!-- Replace the source with your own local file if you host one -->
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-
-          <h4 style="margin-top:12px">Short video</h4>
-          <!-- Video -->
-          <video controls width="320">
-            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-
-        </aside>
-      </section>
-
-      <section id="learn-more" style="margin-top:22px">
-        <h3>How to get involved</h3>
-        <p>
-          If you want to experience fishing in Myanmar: join a local guide or community-run tour. Many villages offer catch-and-cook experiences and short boat trips.
-        </p>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Fishing in Myanmar — <a href="about.html">About this site</a> | <a href="gallery.html">Gallery</a></p>
-    </footer>
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Fishing Scene">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21" alt="Boat on River">
+        <img src="https://images.unsplash.com/photo-1524492449090-0cb77ecb3f1f" alt="Fishing Village">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2" alt="Sea Fishing">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Sunset Fishing">
+        <img src="https://images.unsplash.com/photo-1526483360412-f4dbaf036963" alt="Fishermen in Action">
+      </div>
+    </section>
   </div>
+
+  <footer id="contact">
+    <p>&copy; 2025 Fishing in Myanmar | Designed with ❤️</p>
+  </footer>
+
 </body>
 </html>
-
-
-
-
